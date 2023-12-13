@@ -1,4 +1,4 @@
-export function remarkWrapTables() {
+export default function remarkWrapTables() {
   return tree => {
     const processNode = (node, index, parent) => {
       if (node.type === 'table') {

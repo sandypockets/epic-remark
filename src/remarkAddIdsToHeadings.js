@@ -1,4 +1,4 @@
-export function remarkAddIdsToHeadings() {
+export default function remarkAddIdsToHeadings() {
   return tree => {
     const addIdToHeading = node => {
       if (node.type === 'heading') {
