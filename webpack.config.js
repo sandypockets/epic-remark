@@ -6,12 +6,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default {
   mode: 'production',
   entry: './src/index.js',
+  target: 'node',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: {
       type: 'module',
     },
+    chunkFormat: 'module',
   },
   experiments: {
     outputModule: true,
