@@ -3,9 +3,11 @@ import html from 'remark-html';
 import gfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
-import { wrapElements, addHeadingIds, addTableOfContents } from '../dist/index.js';
+import wrapElements from './plugins/wrapElements.js';
+import addHeadingIds from './plugins/addHeadingIds.js';
+import addTableOfContents from './plugins/addTableOfContents.js';
 
-export async function processMarkdown(markdownContent, options = {}) {
+export default async function processMarkdown(markdownContent, options = {}) {
   let tableOfContents = null;
 
   const processor = remark().use(html).use(gfm).use(remarkRehype);
@@ -22,9 +24,8 @@ export async function processMarkdown(markdownContent, options = {}) {
     processor.use(() => async tree => {
       const tocNode = addTableOfContents(tree, options.insertTocDirectly);
       if (tocNode) {
-        // Use a new processor to convert the ToC node to an HTML string
         tableOfContents = await remark()
-          .use(() => () => tocNode) // Pass the tocNode directly to the processor
+          .use(() => () => tocNode)
           .use(rehypeStringify)
           .process('')
           .then(file => file.toString());

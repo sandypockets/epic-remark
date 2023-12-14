@@ -14,7 +14,6 @@ export default function addTableOfContents(tree, insertDirectly = false) {
   const tableOfContentsNode = buildTocStructure(headings);
 
   if (insertDirectly) {
-    // Insert directly into the tree
     const lineBreak1 = { type: 'element', tagName: 'br', properties: {}, children: [] };
     const lineBreak2 = { type: 'element', tagName: 'br', properties: {}, children: [] };
     tree.children.unshift(lineBreak2);

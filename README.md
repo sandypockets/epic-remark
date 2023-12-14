@@ -1,4 +1,4 @@
-# `remark-enhanced`
+# `epic-remark`
 Remark enhanced is a collection of plugins for remark.
 
 ## How does it work

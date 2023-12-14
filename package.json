@@ -1,7 +1,7 @@
 {
-  "name": "remark-enhanced",
-  "version": "1.0.0",
-  "description": "Remark Enhanced is a collection of plugins for Remark.",
+  "name": "epic-remark",
+  "version": "0.1.0",
+  "description": "Epic Remark is a collection of plugins for Remark.",
   "main": "dist/index.js",
   "type": "module",
   "files": [
