@@ -23,4 +23,4 @@ Use the all-in-one `processMarkdown` function to format your markdown into HTML,
 * `addTableOfContents` - Gathers headings from content and creates a table of contents. Table of contents can be automatically prepended to the content, or returned in a separate object. 
 
 ## License
-MIT. See [license.md](license.md)
+MIT. See [license.md](LICENSE.md)
