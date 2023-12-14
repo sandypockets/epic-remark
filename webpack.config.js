@@ -3,21 +3,9 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export default {
+const commonConfig = {
   mode: 'production',
   entry: './src/index.js',
-  target: 'node',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
-    library: {
-      type: 'module',
-    },
-    chunkFormat: 'module',
-  },
-  experiments: {
-    outputModule: true,
-  },
   module: {
     rules: [
       {
@@ -42,3 +30,31 @@ export default {
     ],
   },
 };
+
+const esmConfig = {
+  ...commonConfig,
+  target: 'node',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.esm.js',
+    library: {
+      type: 'module',
+    },
+    chunkFormat: 'module',
+  },
+  experiments: {
+    outputModule: true,
+  },
+};
+
+const cjsConfig = {
+  ...commonConfig,
+  target: 'node',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
+    libraryTarget: 'commonjs2',
+  },
+};
+
+export default [esmConfig, cjsConfig];
