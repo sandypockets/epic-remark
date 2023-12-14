@@ -10,11 +10,11 @@ export default {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     library: {
-      type: 'module', // Set the type to module for ESM
+      type: 'module',
     },
   },
   experiments: {
-    outputModule: true, // Enable the output module experiment
+    outputModule: true,
   },
   module: {
     rules: [

@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "prep": "yarn prettier . --write && yarn build"
+    "prep": "yarn prettier . --write && yarn build",
+    "example": "cd example && node example.js"
   },
   "keywords": [
     "remark",
@@ -28,5 +29,9 @@
     "remark-html": "^16.0.1",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "rehype-stringify": "^10.0.0",
+    "remark-rehype": "^11.0.0"
   }
 }
