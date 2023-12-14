@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import { processMarkdown } from '../src/processMarkdown.js';
 import getAllPosts from './helpers/getAllPosts.js';
+import { processMarkdown } from '../dist/index.js';
 
 async function convertPostToHtml(id) {
   const postsDirectory = path.join(process.cwd(), './posts');
