@@ -24,19 +24,22 @@ export default async function processMarkdown(markdownContent, options = {}) {
   };
 
   const wrapConfig = { ...defaultWrapConfig, ...(options.wrapConfig || {}) };
-  let frontMatterData = null;
+  let frontMatterData = {};
   let tableOfContents = null;
   let readingTime = null;
 
   const processor = remark()
-    .use(frontmatter, ['yaml'])
-    .use(() => tree => {
-      frontMatterData = extractFrontMatter(tree);
-    })
-    .use(html)
-    .use(gfm)
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(wrapElements, wrapConfig);
+  .use(frontmatter, ['yaml'])
+  .use(() => tree => {
+    const yamlNode = tree.children.find(node => node.type === 'yaml');
+    if (yamlNode) {
+      frontMatterData = yaml.parse(yamlNode.value);
+    }
+  })
+  .use(html)
+  .use(gfm)
+  .use(remarkRehype, { allowDangerousHtml: true })
+  .use(wrapElements, wrapConfig);
 
   if (options.addHeadingIds) {
     processor.use(addHeadingIds);
@@ -47,10 +50,10 @@ export default async function processMarkdown(markdownContent, options = {}) {
       const tocNode = addTableOfContents(tree, options.insertTocDirectly);
       if (tocNode) {
         tableOfContents = await remark()
-          .use(() => () => tocNode)
-          .use(rehypeStringify)
-          .process('')
-          .then(file => file.toString());
+        .use(() => () => tocNode)
+        .use(rehypeStringify)
+        .process('')
+        .then(file => file.toString());
       }
     });
   }
@@ -63,7 +66,7 @@ export default async function processMarkdown(markdownContent, options = {}) {
     processor.use(embed).use(rehypeRaw);
   }
 
-  let processedContent = await processor.use(rehypeStringify).process(markdownContent);
+  const processedContent = await processor.use(rehypeStringify).process(markdownContent);
   const wrappedContentHtml = wrapWithDiv(processedContent.toString(), 'markdown');
 
   return {
@@ -72,9 +75,4 @@ export default async function processMarkdown(markdownContent, options = {}) {
     toc: tableOfContents,
     readingTime: readingTime,
   };
-}
-
-function extractFrontMatter(tree) {
-  const frontMatterNode = tree.children.find(node => node.type === 'yaml');
-  return frontMatterNode ? yaml.parse(frontMatterNode.value) : {};
 }
