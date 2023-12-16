@@ -136,7 +136,6 @@
 .copy-link-h5,
 .copy-link-h6 {
   font-weight: bold;
-  text-transform: lowercase;
   color: #ccc;
   line-height: 1.2;
 }
