@@ -187,8 +187,7 @@
   border-spacing: 0;
   background-color: #1a1a1a;
   border-radius: 0.5rem;
-  margin-top: 0.125rem;
-  margin-bottom: 0.125rem;
+  margin: 0.125rem;
 }
 
 .markdown table tbody {
@@ -251,6 +250,18 @@ ul.markdown.toc {
   margin-left: 1.5rem;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+}
+
+div.epic-remark-gist {
+  height: 400px;
+}
+
+div.epic-remark-gist > iframe {
+  height: 100%;
+}
+
+iframe.epic-remark-youtube {
+  height: 400px;
 }
 
 @media (max-width: 768px) {

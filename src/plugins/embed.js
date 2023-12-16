@@ -53,7 +53,7 @@ export default function embed() {
             case 'youtube':
               const embedUrl = transformYouTubeUrl(url);
               node.type = 'raw';
-              node.value = `<iframe src="${embedUrl}" width="100%" height="100%" title="YouTube video player" frameborder="0" allowfullscreen></iframe>`;
+              node.value = `<iframe class="epic-remark-youtube" src="${embedUrl}" width="100%" title="YouTube video player" frameborder="0" allowfullscreen></iframe>`;
               break;
             case 'iframe':
               node.type = 'raw';
