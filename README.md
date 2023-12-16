@@ -8,6 +8,7 @@ Use the all-in-one `processMarkdown` function to format your markdown into HTML,
 
 ## Currently supported frameworks: 
 * Next.js
+* Nuxt.js
 
 ### Dependencies
 - `remark`: `^15.0.1`
@@ -38,6 +39,9 @@ Generates a table of contents based on the document's headings. Users can config
 
 ## `calculateReadingTime`
 Estimates the reading time of the provided markdown content. The calculation is based on a standard words-per-minute metric, which can be adjusted via options. The reading time is returned in minutes, offering a quick overview of the content length.
+
+## `embed`
+Embeds content from external sources, such as YouTube videos and GitHub gists with simple syntax like `!embed https://your-embed-url.com/`
 
 ### Notes
 Processed markdown always returns auto-linked URLs. This means that if you have a URL in your markdown, it will be converted to a clickable link. 
