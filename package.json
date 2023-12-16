@@ -11,7 +11,8 @@
   "scripts": {
     "build": "webpack",
     "prep": "yarn prettier . --write && yarn build",
-    "test": "jest"
+    "test": "jest",
+    "example": "node ./scripts/runExample.js"
   },
   "jest": {
     "testEnvironment": "node",
