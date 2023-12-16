@@ -2,7 +2,6 @@ import addHeadingIds from '../src/plugins/addHeadingIds';
 
 describe('addHeadingIds', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
     addHeadingIds()(mockTree);
   });
 

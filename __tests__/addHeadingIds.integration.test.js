@@ -1,4 +1,4 @@
-import { processMarkdown } from '../dist/index.js';
+import { processMarkdown } from '../dist/index.cjs';
 
 describe('addHeadingIds with actual Markdown', () => {
   it('should add IDs to headings in Markdown content', async () => {
