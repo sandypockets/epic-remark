@@ -9,6 +9,7 @@ import addHeadingIds from './plugins/addHeadingIds.js';
 import addTableOfContents from './plugins/addTableOfContents.js';
 import calculateReadingTime from './plugins/calculateReadingTime.js';
 import embed from './plugins/embed.js';
+import wrapWithDiv from './helpers/wrapWithDiv.js'
 
 export default async function processMarkdown(markdownContent, options = {}) {
   const defaultWrapConfig = {
@@ -17,11 +18,6 @@ export default async function processMarkdown(markdownContent, options = {}) {
   };
 
   const wrapConfig = { ...defaultWrapConfig, ...(options.wrapConfig || {}) };
-
-  function wrapWithDiv(htmlString, className) {
-    if (!htmlString) return '';
-    return `<div class="${className}">${htmlString}</div>`;
-  }
 
   let tableOfContents = null;
   let readingTime = null;
