@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { processMarkdown } = require('epic-remark');
+const { processMarkdown } = require('epic-remark/dist/index');
 
 const postsDirectory = path.join(__dirname, 'posts');
 const outputDirectory = path.join(__dirname, 'static');
@@ -10,6 +10,7 @@ const processPosts = async () => {
   const posts = [];
 
   for (const fileName of fileNames) {
+    const id = fileName.replace(/\.md$/, ''); // Remove the file extension to get the ID
     const filePath = path.join(postsDirectory, fileName);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const options = {
@@ -23,7 +24,10 @@ const processPosts = async () => {
       renderEmbeds: true,
     }
     const processedContent = await processMarkdown(fileContents, options);
-    posts.push(processedContent);
+    posts.push({
+      id, // Include the ID in the post object
+      ...processedContent
+    });
   }
 
   if (!fs.existsSync(outputDirectory)){

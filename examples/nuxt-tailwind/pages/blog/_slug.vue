@@ -11,7 +11,7 @@
 import 'epic-remark/dist/index.esm.light.css';
 export default {
   async asyncData({ params, app }) {
-    const postData = app.$posts.find(post => post.id === params.slug);
+    const postData = await app.$posts.find(post => post.id === params.slug);
     return { postData };
   }
 };
