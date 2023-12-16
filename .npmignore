@@ -18,3 +18,4 @@ webpack.config.js
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 DOCUMENTATION.md
+rollup.config.js

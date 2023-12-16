@@ -14,6 +14,10 @@ import embed from './plugins/embed.js';
 import wrapWithDiv from './helpers/wrapWithDiv.js';
 
 export default async function processMarkdown(markdownContent, options = {}) {
+  if (!markdownContent) {
+    throw new Error('No markdown content provided');
+  }
+
   const defaultWrapConfig = {
     img: 'epic-remark-image',
     table: 'epic-remark-table',
