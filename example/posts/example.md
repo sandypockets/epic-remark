@@ -1,6 +1,12 @@
-# Welcome to the Example Post
+---
+title: "Welcome to the Example Post"
+date: "2023-12-15"
+author: "Your Name"
+summary: "This post demonstrates various Markdown features supported by our processor."
+tags: ["Markdown", "Formatting", "Guide"]
+---
 
-This post demonstrates various Markdown features supported by our processor.
+Welcome! This post demonstrates various Markdown features supported by our processor.
 
 ## Styling Text
 

@@ -11,8 +11,8 @@ async function convertPostToHtml(fileContents) {
     renderEmbeds: true,
   };
 
-  const { contentHtml, toc, readingTime } = await processMarkdown(fileContents, options);
-  return { contentHtml, toc, readingTime };
+  const { contentHtml, toc, readingTime, frontMatter } = await processMarkdown(fileContents, options);
+  return { contentHtml, toc, readingTime, frontMatter };
 }
 
 export async function getStaticPaths() {
@@ -24,16 +24,16 @@ export async function getStaticProps({ params }) {
   const allPosts = getAllPosts();
   const { fileContents } = allPosts.find(post => post.id === params.slug);
   const postData = await convertPostToHtml(fileContents);
-  return { props: { postData, slug: params.slug } };
+  return { props: { postData } };
 }
 
-export default function Post({ postData, slug }) {
+export default function Post({ postData }) {
   return (
-    <article>
-      <h1 className="text-5xl">{slug}</h1>
-      <p>Reading time: {postData.readingTime} min</p>
+    <article className="max-w-3xl mx-auto py-12">
+      <h1 className="text-5xl font-semibold">{postData.frontMatter.title}</h1>
+      <p className="my-2">Reading time: {postData.readingTime} min</p>
       <div>
-        <h3 className="text-2xl">Table of Contents</h3>
+        <h3 className="text-xl">Table of Contents</h3>
         <div dangerouslySetInnerHTML={{ __html: postData.toc }} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
