@@ -29,7 +29,7 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ postData }) {
   return (
-    <article className="max-w-3xl mx-auto py-12">
+    <article className="max-w-3xl mx-auto px-6 py-12">
       <h1 className="text-5xl font-semibold">{postData.frontMatter.title}</h1>
       <p className="my-2">Reading time: {postData.readingTime} min</p>
       <div>
