@@ -1,7 +1,13 @@
 # `epic-remark`
+
+**Warning**: This package is still in development. It is not yet ready for production use.
+
 `epic-remark` is a Markdown to HTML processor built on top of `remark`. It adds GitHub-flavoured markdown capabilities, alongside some handy must-have custom plugins. 
 
 Use the all-in-one `processMarkdown` function to format your markdown into HTML, or import the custom plugins working behind the scenes one-by-one to mix your own flavour of Markdown HTML.
+
+## Currently supported frameworks: 
+* Next.js
 
 ### Dependencies
 - `remark`: `^15.0.1`
