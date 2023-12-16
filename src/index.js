@@ -1,4 +1,4 @@
-import './styles.css';
+import './styles-dark.css';
 import addHeadingIds from './plugins/addHeadingIds.js';
 import wrapElements from './plugins/wrapElements.js';
 import addTableOfContents from './plugins/addTableOfContents.js';
