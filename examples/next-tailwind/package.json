@@ -9,8 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "epic-react": "^1.0.0",
-    "epic-remark": "^0.1.7",
+    "epic-remark": "^0.1.10",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"

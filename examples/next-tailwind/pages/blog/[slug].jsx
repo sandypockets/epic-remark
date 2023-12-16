@@ -1,5 +1,5 @@
 import getAllPosts from '../../helpers/getAllPosts';
-import 'epic-remark/dist/index.esm.css';
+import 'epic-remark/dist/index.esm.dark.css';
 import { processMarkdown } from 'epic-remark';
 
 async function convertPostToHtml(fileContents) {
