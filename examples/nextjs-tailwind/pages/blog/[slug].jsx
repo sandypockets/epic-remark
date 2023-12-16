@@ -1,6 +1,6 @@
-import { processMarkdown } from '../../../dist/index.esm';
+import { processMarkdown } from '../../../../dist/index.esm';
 import getAllPosts from '../../helpers/getAllPosts';
-import '../../../dist/styles.css';
+import '../../../../dist/styles.css';
 
 async function convertPostToHtml(fileContents) {
   const options = {
