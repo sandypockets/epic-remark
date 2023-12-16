@@ -30,10 +30,10 @@ export async function getStaticProps({ params }) {
 export default function Post({ postData, slug }) {
   return (
     <article>
-      <h1>{slug}</h1>
+      <h1 className="text-5xl">{slug}</h1>
       <p>Reading time: {postData.readingTime} min</p>
       <div>
-        <h3>Table of Contents</h3>
+        <h3 className="text-2xl">Table of Contents</h3>
         <div dangerouslySetInnerHTML={{ __html: postData.toc }} />
       </div>
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
