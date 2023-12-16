@@ -19,3 +19,6 @@ example/package-lock.json
 example/package.json
 example/README.md
 example/postcss.config.js
+*/.next/*
+*/package-lock.json
+*/package.json
