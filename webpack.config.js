@@ -46,6 +46,17 @@ const commonConfig = {
   },
 };
 
+const browserConfig = {
+  ...commonConfig,
+  target: 'web', // target browsers
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.browser.js', // different output file
+    libraryTarget: 'umd', // UMD format for broader compatibility
+  },
+  // other browser-specific configurations...
+};
+
 const esmConfig = {
   ...commonConfig,
   target: 'node',
@@ -72,4 +83,4 @@ const cjsConfig = {
   },
 };
 
-export default [esmConfig, cjsConfig];
+export default [esmConfig, cjsConfig, browserConfig];

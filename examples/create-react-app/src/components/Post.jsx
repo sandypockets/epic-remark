@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { processMarkdown } from '../../../../dist/index.esm.js';
-import '../../../../dist/styles.css';
+import { processMarkdown } from 'epic-remark';
 
 function Post() {
   const { slug } = useParams();

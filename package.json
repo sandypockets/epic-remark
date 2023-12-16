@@ -4,6 +4,7 @@
   "description": "Epic Remark is an all-in-one markdown to HTML processor built on top of remark",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "browser": "dist/index.browser.js",
   "type": "module",
   "files": [
     "dist"
