@@ -50,7 +50,7 @@ function buildTocStructure(headings) {
   const tocList = {
     type: 'element',
     tagName: 'ul',
-    properties: { className: 'toc' },
+    properties: { className: 'toc markdown' },
     children: [],
   };
 

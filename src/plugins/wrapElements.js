@@ -1,26 +1,24 @@
-export default function wrapElements(elementsToWrap) {
+export default function wrapElements(config) {
   return tree => {
-    traverseTree(tree, elementsToWrap);
+    traverseTree(tree, config);
   };
 }
 
-function traverseTree(node, elementsToWrap) {
+function traverseTree(node, config) {
   if (!node.children) return;
 
-  for (let i = 0; i < node.children.length; i++) {
-    const child = node.children[i];
-
-    if (child.type === 'element' && elementsToWrap.includes(child.tagName)) {
+  node.children.forEach((child, i) => {
+    if (child.type === 'element' && config[child.tagName]) {
+      const wrapperClassName = config[child.tagName];
       const wrapper = {
         type: 'element',
         tagName: 'div',
-        properties: { className: 'custom-wrapper' },
+        properties: { className: wrapperClassName },
         children: [child],
       };
-
       node.children[i] = wrapper;
     }
 
-    traverseTree(child, elementsToWrap);
-  }
+    traverseTree(child, config);
+  });
 }

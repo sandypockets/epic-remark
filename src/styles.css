@@ -1,0 +1,264 @@
+.markdown {
+  color: #d2d2d2;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+.markdown a,
+.markdown a > code {
+  color: #48bb78;
+  transition: color 0.15s ease-in-out;
+  margin: 0.25rem;
+}
+
+.markdown a > code {
+  margin: -0.25rem;
+}
+
+.markdown code,
+.markdown pre,
+.markdown pre > code {
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  color: currentColor;
+}
+
+.markdown code {
+  border: 1px solid rgba(64, 64, 64, 0.2);
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  color: #ccc;
+}
+
+.markdown pre > code {
+  padding: 0.125rem;
+  border: none;
+}
+
+.markdown pre {
+  padding-left: 1.25rem;
+  padding-right: 0.125rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  overflow: scroll;
+  white-space: pre;
+  border: 1px solid rgba(64, 64, 64, 0.2);
+  border-radius: 0.25rem;
+  background-color: #1a1a1a;
+  margin-top: 0.375rem;
+  margin-bottom: 0.375rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  color: #48bb78;
+}
+
+.markdown h2 > code {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  font-family: monospace;
+}
+
+.markdown h3 > code {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  font-family: monospace;
+}
+
+.markdown p {
+  color: #d2d2d2;
+  font-weight: lighter;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.markdown strong {
+  font-weight: bold;
+}
+
+.markdown em {
+  font-style: italic;
+}
+
+.markdown blockquote {
+  font-style: italic;
+  background-color: rgba(96, 96, 96, 0.2);
+  padding: 0.125rem 0.625rem;
+  border-left: 4px solid #ccc;
+}
+
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.markdown ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+  font-weight: lighter;
+}
+
+.markdown ul li {
+  padding-left: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.markdown ol {
+  list-style-type: decimal;
+  margin-left: 1rem;
+  font-weight: lighter;
+}
+
+.markdown ol li {
+  padding-left: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.markdown hr {
+  margin-top: 2.5rem;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.copy-link-h1,
+.copy-link-h2,
+.copy-link-h3,
+.copy-link-h4,
+.copy-link-h5,
+.copy-link-h6 {
+  font-weight: bold;
+  text-transform: lowercase;
+  color: #ccc;
+  line-height: 1.2;
+}
+
+.markdown h1,
+.copy-link-h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.625rem;
+}
+
+.markdown h2,
+.copy-link-h2 {
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: -0.125rem;
+}
+
+.markdown h3,
+.copy-link-h3 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: -0.1875rem;
+}
+
+.markdown h4,
+.copy-link-h4 {
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+  margin-bottom: -0.1875rem;
+}
+
+.markdown h5,
+.copy-link-h5 {
+  font-size: 1rem;
+  margin-top: 1.25rem;
+}
+
+.markdown h6,
+.copy-link-h6 {
+  font-size: 0.875rem;
+  margin-top: 1.25rem;
+}
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #1a1a1a;
+  border-radius: 0.5rem;
+  margin-top: 0.125rem;
+  margin-bottom: 0.125rem;
+}
+
+.markdown table tbody {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.markdown table th,
+.markdown table td {
+  padding: 0.75rem;
+  border: 1px solid rgba(64, 64, 64, 0.2);
+  background-color: rgba(96, 96, 96, 0.15);
+  font-size: 0.875rem;
+}
+
+.markdown table th {
+  font-weight: bold;
+  background-color: rgba(96, 96, 96, 0.25);
+}
+
+.markdown table td {
+  text-align: left;
+}
+
+.markdown table td > img {
+  margin: 0 auto;
+  min-width: 10rem;
+}
+
+.markdown table td:first-child {
+  border-left: none;
+}
+
+.markdown table tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown table tr td:last-child {
+  border-right: none;
+}
+
+.markdown table thead tr:first-child th:first-child {
+  border-top-left-radius: 0.25rem;
+}
+
+.markdown table thead tr:first-child th:last-child {
+  border-top-right-radius: 0.25rem;
+}
+
+.markdown table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 0.25rem;
+}
+
+.markdown table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .markdown table th,
+  .markdown table td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
