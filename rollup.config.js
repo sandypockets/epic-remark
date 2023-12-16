@@ -4,19 +4,19 @@ import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 
 export default {
-  input: 'src/index.js', // Your entry point
+  input: 'src/index.js',
   output: {
     file: 'dist/index.esm.js',
-    format: 'esm', // ES Module format
-    sourcemap: true,
+    format: 'esm',
+    sourcemap: false,
   },
   plugins: [
-    resolve(), // Resolves node modules
-    commonjs(), // Converts CommonJS modules to ES6
+    resolve(),
+    commonjs(),
     postcss({
-      extract: true, // Extracts CSS to a separate file
-      minimize: true, // Minifies the CSS
+      extract: true,
+      minimize: true,
     }),
-    terser(), // Minifies the bundle
+    terser(),
   ],
 };
