@@ -3,8 +3,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 
-const createConfig = (format, outputFile, cssFile) => ({
-  input: 'src/index.js',
+const createConfig = (inputFile, format, outputFile, cssFile) => ({
+  input: inputFile,
   output: {
     file: `dist/${outputFile}`,
     format: format,
@@ -22,12 +22,8 @@ const createConfig = (format, outputFile, cssFile) => ({
 });
 
 export default [
-  // ESM build for light mode
-  createConfig('esm', 'index.esm.js', 'index.esm.light.css'),
-  // ESM build for dark mode
-  createConfig('esm', 'index.esm.js', 'index.esm.dark.css'),
-  // CommonJS build for light mode
-  createConfig('cjs', 'index.cjs', 'index.cjs.light.css'),
-  // CommonJS build for dark mode
-  createConfig('cjs', 'index.cjs', 'index.cjs.dark.css'),
+  createConfig('src/index-light.js', 'esm', 'index.esm.js', 'index.esm.light.css'),
+  createConfig('src/index-dark.js', 'esm', 'index.esm.js', 'index.esm.dark.css'),
+  createConfig('src/index-light.js', 'cjs', 'index.cjs', 'index.cjs.light.css'),
+  createConfig('src/index-dark.js', 'cjs', 'index.cjs', 'index.cjs.dark.css'),
 ];

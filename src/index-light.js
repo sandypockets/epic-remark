@@ -1,4 +1,3 @@
-import './styles-dark.css';
 import './styles-light.css';
 import addHeadingIds from './plugins/addHeadingIds.js';
 import wrapElements from './plugins/wrapElements.js';
