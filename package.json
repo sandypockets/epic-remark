@@ -1,8 +1,8 @@
 {
   "name": "epic-remark",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Epic Remark is an all-in-one markdown to HTML processor built on top of remark",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
   "type": "module",
   "files": [
