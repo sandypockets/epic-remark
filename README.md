@@ -3,6 +3,15 @@
 
 Use the all-in-one `processMarkdown` function to format your markdown into HTML, or import the custom plugins working behind the scenes one-by-one to mix your own flavour of Markdown HTML.
 
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/epic-remark)
+![npm bundle size](https://img.shields.io/bundlephobia/min/epic-remark)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/sandypockets/epic-remark/ci.yml)
+![GitHub issues](https://img.shields.io/github/issues/sandypockets/epic-remark)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/sandypockets/epic-remark)
+![npm](https://img.shields.io/npm/dt/epic-remark)
+![npm](https://img.shields.io/npm/dw/epic-remark)
+![NPM](https://img.shields.io/npm/l/epic-remark)
+
 ## Currently supported frameworks: 
 * Next.js
 * Nuxt.js
@@ -81,7 +90,7 @@ See the [documentation](DOCUMENTATION.md) for more details on each option.
 # Plugins
 
 ## `processMarkdown`
-The processMarkdown function is the core of` epic-remark`. It converts markdown to HTML, applying a range of configurable options to enable additional plugins during execution. It is the primary function you'll use, with other plugins augmenting its capabilities.
+The processMarkdown function is the core of `epic-remark`. It converts markdown to HTML, applying a range of configurable options to enable additional plugins during execution. It is the primary function you'll use, with other plugins augmenting its capabilities.
 
 ## `addHeadingIds`
 Automatically adds an id attribute to all headings (h1 to h6). The id value mirrors the heading's text, transformed into a URL-friendly format. This plugin is ideal for creating anchor links and improving navigability within documents.
