@@ -1,7 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# `epic-remark next-tailwind`
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), and integrated with `epic-remark` and everything you need to start writing content right away. 
+
+### How is this different from `create-next-app`?
+This `epic-remark` build of `create-next-app` is preconfigured with `epic-remark` and a few other goodies to get you started writing content right away. Most notably:
+* pages/blog/index.jsx
+* pages/blog/[slug].jsx
+* posts/
+
+These pages represent a basic blog setup. 
+
+* Write new `epic-remark`-flavoured markdown in the `posts/` directory. 
+* The `blog/index.jsx` page displays a list of all posts in the `posts/` directory.
+* The `blog/[slug].jsx` page displays a single post, like `/blog/example`.
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -35,6 +47,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=epic-remark-example) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
