@@ -10,6 +10,8 @@ Use the all-in-one `processMarkdown` function to format your markdown into HTML,
 * Next.js
 * Nuxt.js
 
+All supported frameworks are available in the `examples/` directory. You can still use `epic-remark` with other frameworks, but you'll need to sort out the build and integration yourself.
+
 ### Dependencies
 - `remark`: `^15.0.1`
 - `remark-gfm`: `^4.0.0`
@@ -44,7 +46,12 @@ Estimates the reading time of the provided markdown content. The calculation is 
 Embeds content from external sources, such as YouTube videos and GitHub gists with simple syntax like `!embed https://your-embed-url.com/`
 
 ### Notes
-Processed markdown always returns auto-linked URLs. This means that if you have a URL in your markdown, it will be converted to a clickable link. 
+Processed markdown always returns auto-linked URLs. This means that if you have a URL in your markdown, it will be converted to a clickable link.
+
+## Contributing
+Contributions are welcome! Please see the contributing docs for more details.
 
 ## License
-MIT. See [license.md](LICENSE.md)
+`epic-remark` uses the MIT license. See [license.md](LICENSE.md) for more details. 
+
+`epic-remark` also depends on several other packages, all of which except for `yaml` (which is ISC) are also MIT license.
